@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>NYX‑ORBIT // Ambient AI Console</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- LOGIN SCREEN -->
+  <div id="login-screen" class="screen active">
+    <div class="login-card glass">
+      <h1 class="title">NYX‑ORBIT</h1>
+      <p class="subtitle">ACCESS GATE</p>
+
+      <div class="input-group">
+        <label>Usuario</label>
+        <input id="username" type="text" placeholder="tu_usuario" />
+      </div>
+
+      <div class="input-group">
+        <label>Contraseña</label>
+        <input id="password" type="password" placeholder="••••••••" />
+      </div>
+
+      <button id="login-btn" class="btn neon">Entrar</button>
+      <p id="login-error" class="error"></p>
+    </div>
+  </div>
+
+  <!-- APP SCREEN -->
+  <div id="app-screen" class="screen">
+    <div class="topbar glass">
+      <div>
+        <h1 class="title">NYX‑ORBIT</h1>
+        <p class="subtitle">Agente propio // Ambient AI</p>
+      </div>
+      <div class="user-info">
+        <span id="user-pill" class="user-pill"></span>
+        <button id="logout-btn" class="btn small">Salir</button>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="panel glass input-panel">
+        <h2>Prompt</h2>
+        <textarea id="prompt" placeholder="Háblale a tu agente..."></textarea>
+
+        <label class="mode-label">Modo</label>
+        <select id="mode-select">
+          <option value="">Auto</option>
+          <option value="developer">Developer</option>
+          <option value="teacher">Teacher</option>
+          <option value="creative">Creative</option>
+          <option value="analyst">Analyst</option>
+          <option value="chat">Chat</option>
+        </select>
+
+        <button id="send-btn" class="btn neon">Generar respuesta</button>
+        <p id="prompt-error" class="error"></p>
+      </div>
+
+      <div class="panel glass output-panel">
+        <h2>Quick Takeaway</h2>
+        <div id="quick-text" class="output"></div>
+
+        <h2>Expanded</h2>
+        <div id="expanded-text" class="output"></div>
+
+        <h2>Deep Dive Hint</h2>
+        <div id="deep-hint-text" class="output"></div>
+
+        <h2>Meta</h2>
+        <ul id="meta-list" class="meta"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
